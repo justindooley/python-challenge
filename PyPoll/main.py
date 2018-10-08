@@ -56,7 +56,7 @@ print("Li " + str(round(li_percent)) + "% (" + str(li_count) + ")")
 print("O'Tooley: " + str(round(otooley_percent)) + "% (" + str(otooley_count) + ")")
 print("-------------------------")
 
-#Pick the winnder!
+#Pick the winner!
 if ((correy_count) > (khan_count or li_count or otooley_count)):
     print("Winner: Correy")
 
