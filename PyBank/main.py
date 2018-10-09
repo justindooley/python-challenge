@@ -18,6 +18,16 @@ with open(budget_csvpath) as budget_csv:
         data.append({
             csv_header[0]: row[0], csv_header[1]: int(row[1])
         })
+        
+    # Create new lists for higher maths
+    revenue = []
+    rev_change = []
+    date = []
+   
+    #This fills separate revenue, revenue change, and date lists.
+            date.append(row[0])
+            revenue.append(float(row[1]))
+    
     print("Financial Analysis")   
     print("----------------------------")
     month_count = (len(data))
@@ -27,10 +37,29 @@ with open(budget_csvpath) as budget_csv:
     for data1 in data:
         total += data1['Profit/Losses']
     print(f"Total: ${total}") 
+    
+    #in this loop I found total revenue change, max revenue change, and min revenue change. 
+    for i in range(1,len(revenue)):
+        rev_change.append(revenue[i] - revenue[i-1])   
+        avg_rev_change = sum(rev_change)/len(rev_change)
+        max_rev_change = max(rev_change)
+        min_rev_change = min(rev_change)
 
-    average = 0
+        max_rev_change_date = str(date[rev_change.index(max(rev_change))])
+        min_rev_change_date = str(date[rev_change.index(min(rev_change))])
 
-    print(data)
+
+    print("Avereage Revenue Change: $", round(avg_rev_change))
+    print("Greatest Increase in Revenue:", max_rev_change_date,"($", max_rev_change,")")
+    print("Greatest Decrease in Revenue:", min_rev_change_date,"($", min_rev_change,")")
+    
+    
+    #average = 0
+    #for data2 in data:
+    #    average = total / month_count
+    #print(f"Average  Change: ${average}")
+
+    # print(data)
 
     # greatest = 0
     # for data3 in data:
