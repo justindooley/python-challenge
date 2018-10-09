@@ -38,7 +38,7 @@ with open(budget_csvpath) as budget_csv:
         total += data1['Profit/Losses']
     print(f"Total: ${total}") 
     
-    #in this loop I found total revenue change, max revenue change, and min revenue change. 
+    #in this loop I found average revenue change, max revenue change, and min revenue change. 
     for i in range(1,len(revenue)):
         rev_change.append(revenue[i] - revenue[i-1])   
         avg_rev_change = sum(rev_change)/len(rev_change)
