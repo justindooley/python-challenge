@@ -24,7 +24,7 @@ with open(budget_csvpath) as budget_csv:
     rev_change = []
     date = []
    
-    #This fills separate revenue, revenue change, and date lists.
+    #This fills separate revenue and date lists.
         date.append(row[0])
         revenue.append(int(row[1]))
     
