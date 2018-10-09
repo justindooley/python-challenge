@@ -49,7 +49,7 @@ with open(budget_csvpath) as budget_csv:
         min_rev_change_date = str(date[rev_change.index(min(rev_change))])
 
 
-    print("Avereage Revenue Change: $", round(avg_rev_change))
+    print("Avereage Revenue Change: $", (avg_rev_change))
     print("Greatest Increase in Revenue:", max_rev_change_date,"($", max_rev_change,")")
     print("Greatest Decrease in Revenue:", min_rev_change_date,"($", min_rev_change,")")
     
