@@ -70,23 +70,23 @@ correy = ("Correy: " + str(round(correy_percent)) + "% (" + str(correy_count) + 
 li = ("Li " + str(round(li_percent)) + "% (" + str(li_count) + ")")
 otooley = ("O'Tooley: " + str(round(otooley_percent)) + "% (" + str(otooley_count) + ")")
 
-#Pick the winner!
+#Pick the winnder!
 if ((correy_count) > (khan_count or li_count or otooley_count)):
-    print("Winner: Correy")
-
+    # print("Winner: Correy")
+    winner = "Winner: Correy"
 elif ((li_count) > (khan_count or correy_count or otooley_count)):
-    print("Winner: Li")
-
+    # print("Winner: Li")
+    winner = "Winner: Li"
 elif ((otooley_count) > (khan_count or li_count or correy_count)):
-    print("Winner: O'Tooley")
-
+    # print("Winner: O'Tooley")
+    winner = "Winner: O'Tooley"
 elif ((khan_count) > (correy_count or li_count or otooley_count)):
-    print("Winner: Khan")
-
-
+    # print("Winner: Khan")
+    winner = "Winner: Khan"
+print(winner)
 print("-------------------------")
 
 
-with open("Output.txt", "w") as text_file:
-    print(f'Election Results \n-------------------------\nTotal Votes: {vote_count}\n-------------------------\n'+ khan +'\n' + correy + '\n' + li + '\n' + otooley + '\n-------------------------\nWinner: Khan\n-------------------------', file = text_file)
-
+with open("Election Results.txt", "w") as text_file:
+    print(f'Election Results \n-------------------------\nTotal Votes: {vote_count}\n-------------------------\n'+ khan +'\n' + correy + '\n' + li + '\n' + otooley + '\n-------------------------\n' + winner + '\n-------------------------', file = text_file)
+    
