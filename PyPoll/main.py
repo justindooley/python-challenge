@@ -2,10 +2,9 @@ import os
 import math
 import csv
 
+# Open CSV
 election_csvpath = os.path.join("Resources", "election_data.csv")
 
-print("Election Results")
-print("-------------------------")
 
 # starter counters
 khan_count = 0
@@ -47,6 +46,10 @@ correy_percent = (correy_count / vote_count)*100
 li_percent = (li_count / vote_count)*100
 otooley_percent = (otooley_count / vote_count)*100
 
+
+print("Election Results")
+print("-------------------------")
+
 # Print all the totals and percentages as strings
 print("Total Votes: " + str(vote_count))
 print("-------------------------")
@@ -55,6 +58,17 @@ print("Correy: " + str(round(correy_percent)) + "% (" + str(correy_count) + ")")
 print("Li " + str(round(li_percent)) + "% (" + str(li_count) + ")")
 print("O'Tooley: " + str(round(otooley_percent)) + "% (" + str(otooley_count) + ")")
 print("-------------------------")
+
+khan = ("Khan: " + str(round(khan_percent)) + "% (" + str(khan_count) + ")")
+correy = ("Correy: " + str(round(correy_percent)) + "% (" + str(correy_count) + ")")
+li = ("Li " + str(round(li_percent)) + "% (" + str(li_count) + ")")
+otooley = ("O'Tooley: " + str(round(otooley_percent)) + "% (" + str(otooley_count) + ")")
+
+# for the output text
+khan = ("Khan: " + str(round(khan_percent)) + "% (" + str(khan_count) + ")")
+correy = ("Correy: " + str(round(correy_percent)) + "% (" + str(correy_count) + ")")
+li = ("Li " + str(round(li_percent)) + "% (" + str(li_count) + ")")
+otooley = ("O'Tooley: " + str(round(otooley_percent)) + "% (" + str(otooley_count) + ")")
 
 #Pick the winner!
 if ((correy_count) > (khan_count or li_count or otooley_count)):
@@ -69,4 +83,10 @@ elif ((otooley_count) > (khan_count or li_count or correy_count)):
 elif ((khan_count) > (correy_count or li_count or otooley_count)):
     print("Winner: Khan")
 
+
 print("-------------------------")
+
+
+with open("Output.txt", "w") as text_file:
+    print(f'Election Results \n-------------------------\nTotal Votes: {vote_count}\n-------------------------\n'+ khan +'\n' + correy + '\n' + li + '\n' + otooley + '\n-------------------------\nWinner: Khan\n-------------------------', file = text_file)
+
