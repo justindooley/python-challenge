@@ -56,41 +56,5 @@ with open(budget_csvpath) as budget_csv:
     
     
     with open("Financial Results.txt", "w") as text_file:
-        print(f'Financial Analysis\n-------------------------\nTotal Months:' + month_count + '\nAverage  Change:' + avg_rev_change + '\nGreatest Increase in Profits:' + max_rev_change_date + '($' + max_rev_change + ')' + '\nGreatest Decrease in Profits:' + min_rev_change_date + '($' + min_rev_change + ')', file = text_file)
-    
-
-    
-    #average = 0
-    #for data2 in data:
-    #    average = total / month_count
-    #print(f"Average  Change: ${average}")
-
-    # print(data)
-
-    # greatest = 0
-    # for data3 in data:
-    #     greatest >= data3['Profit/Losses']
-    # print(f'The Greatest Increase in Profits: {greatest}')
-
-    # data = list(budget_csv)
-    # csv_header = next(csvreader)
-    # data = data.remove("\n")
-    # data = str.data.replace('\n','')
-    # print(data.stript("\n")))
-    # print data.replace('\n','')
-    # print(data(remove("\n"))
-    # print strip("\n")
-    # for row in csvreader:
-    #     row = row.split(",")
-    #     date , profit = row
-        # data = data.strip('\n')
-        # data = data.replace('\n', '')
-        # profitlist = float(profit)
-        # profitlist = math.fsum(profit)
-        # print(sum(profitlist)
-        # profits = (int(profit))
-        # print(sum(profits))
-        # print(profit)
-        # print(data)
-        # total_profits = sum(profits)
-        # print("" + str(total_profits))
+        print(f'Financial Analysis\n-------------------------\nTotal Months: {month_count}\nAverage  Change: {avg_rev_change}\nGreatest Increase in Profits: {max_rev_change_date} ($' + str(max_rev_change) + ')' + '\nGreatest Decrease in Profits: ' + str(min_rev_change_date) + '($' + str(min_rev_change) + ')', file = text_file)
+  
