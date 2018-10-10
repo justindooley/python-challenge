@@ -72,16 +72,12 @@ otooley = ("O'Tooley: " + str(round(otooley_percent)) + "% (" + str(otooley_coun
 
 #Pick the winnder!
 if ((correy_count) > (khan_count or li_count or otooley_count)):
-    # print("Winner: Correy")
     winner = "Winner: Correy"
 elif ((li_count) > (khan_count or correy_count or otooley_count)):
-    # print("Winner: Li")
     winner = "Winner: Li"
 elif ((otooley_count) > (khan_count or li_count or correy_count)):
-    # print("Winner: O'Tooley")
     winner = "Winner: O'Tooley"
 elif ((khan_count) > (correy_count or li_count or otooley_count)):
-    # print("Winner: Khan")
     winner = "Winner: Khan"
 print(winner)
 print("-------------------------")
