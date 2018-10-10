@@ -54,8 +54,9 @@ with open(budget_csvpath) as budget_csv:
     print(f"Greatest Increase in Profits:", max_rev_change_date,"($", max_rev_change,")")
     print(f"Greatest Decrease in Profits:", min_rev_change_date,"($", min_rev_change,")")
     
+    
     with open("Financial Results.txt", "w") as text_file:
-    print(f'Financial Analysis\n-------------------------\nTotal Months:' + month_count + '\nAverage  Change:'+ avg_rev_change +'\nGreatest Increase in Profits:' + max_rev_change_date + '($' + max_rev_change + ')' + '\nGreatest Decrease in Profits:' + min_rev_change_date + '($' + min_rev_change + ')', file = text_file)
+        print(f'Financial Analysis\n-------------------------\nTotal Months:' + month_count + '\nAverage  Change:' + avg_rev_change + '\nGreatest Increase in Profits:' + max_rev_change_date + '($' + max_rev_change + ')' + '\nGreatest Decrease in Profits:' + min_rev_change_date + '($' + min_rev_change + ')', file = text_file)
     
 
     
