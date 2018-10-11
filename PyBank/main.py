@@ -46,8 +46,8 @@ with open(budget_csvpath) as budget_csv:
         max_rev_change = max(rev_change)
         min_rev_change = min(rev_change)
         avg_rev_change = round(avg_rev_change,2)
-        max_rev_change_date = str(date[rev_change.index(max(rev_change))])
-        min_rev_change_date = str(date[rev_change.index(min(rev_change))])
+        max_rev_change_date = str(date[rev_change.index(max(rev_change)) + 1])
+        min_rev_change_date = str(date[rev_change.index(min(rev_change)) + 1])
 
 
     print(f"Avereage Change: $", (avg_rev_change))
@@ -56,5 +56,5 @@ with open(budget_csvpath) as budget_csv:
     
     
     with open("Financial Results.txt", "w") as text_file:
-        print(f'Financial Analysis\n-------------------------\nTotal Months: {month_count}\nAverage  Change: {avg_rev_change}\nGreatest Increase in Profits: {max_rev_change_date} ($' + str(max_rev_change) + ')' + '\nGreatest Decrease in Profits: ' + str(min_rev_change_date) + '($' + str(min_rev_change) + ')', file = text_file)
+        print(f'Financial Analysis\n-------------------------\nTotal Months: {month_count}\nAverage  Change: {avg_rev_change}\nGreatest Increase in Profits: {max_rev_change_date} ($' + str(max_rev_change) + ')' + '\nGreatest Decrease in Profits: ' + str(min_rev_change_date) + ' ($' + str(min_rev_change) + ')', file = text_file)
   
