@@ -59,11 +59,6 @@ print("Li " + str(round(li_percent)) + "% (" + str(li_count) + ")")
 print("O'Tooley: " + str(round(otooley_percent)) + "% (" + str(otooley_count) + ")")
 print("-------------------------")
 
-khan = ("Khan: " + str(round(khan_percent)) + "% (" + str(khan_count) + ")")
-correy = ("Correy: " + str(round(correy_percent)) + "% (" + str(correy_count) + ")")
-li = ("Li " + str(round(li_percent)) + "% (" + str(li_count) + ")")
-otooley = ("O'Tooley: " + str(round(otooley_percent)) + "% (" + str(otooley_count) + ")")
-
 # for the output text
 khan = ("Khan: " + str(round(khan_percent)) + "% (" + str(khan_count) + ")")
 correy = ("Correy: " + str(round(correy_percent)) + "% (" + str(correy_count) + ")")
