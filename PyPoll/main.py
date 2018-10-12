@@ -50,7 +50,7 @@ otooley_percent = (otooley_count / vote_count)*100
 print("Election Results")
 print("-------------------------")
 
-# Print all the totals and percentages as strings
+# Print all the totals and percentages as strings w/ rounded averages for cleaner results
 print("Total Votes: " + str(vote_count))
 print("-------------------------")
 print("Khan: " + str(round(khan_percent)) + "% (" + str(khan_count) + ")")
