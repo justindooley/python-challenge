@@ -2,7 +2,7 @@
 import os
 import csv
 
-# Open CSV
+# Open CSV file path
 election_csvpath = os.path.join("Resources", "election_data.csv")
 
 
