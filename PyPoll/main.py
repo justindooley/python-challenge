@@ -41,7 +41,7 @@ with open(election_csvpath) as election_csv:
         if "O'Tooley\n" == Candidate:
             otooley_count+= 1
 
-# Calculate Percentages to Round
+# Calculate Percentages
 khan_percent = (khan_count / vote_count)*100
 correy_percent = (correy_count / vote_count)*100
 li_percent = (li_count / vote_count)*100
