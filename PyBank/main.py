@@ -50,5 +50,5 @@ with open(budget_csvpath) as budget_csv:
     
     # Create text file with the results :)
     with open("Financial Results.txt", "w") as text_file:
-        print(f'Financial Analysis\n-------------------------\nTotal Months: {month_count}\nTotal: ${sum(revenue)}\nAverage  Change: {avg_rev_change}\nGreatest Increase in Profits: {max_rev_change_date} ($'
+        print(f'\nFinancial Analysis\n-------------------------\nTotal Months: {month_count}\nTotal: ${sum(revenue)}\nAverage  Change: {avg_rev_change}\nGreatest Increase in Profits: {max_rev_change_date} ($'
         + str(max_rev_change) + ')' + '\nGreatest Decrease in Profits: ' + str(min_rev_change_date) + ' ($' + str(min_rev_change) + ')', file = text_file)
