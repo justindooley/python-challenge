@@ -1,5 +1,5 @@
+# Import libraries
 import os
-import math
 import csv
 
 # Open CSV
@@ -12,18 +12,19 @@ correy_count = 0
 li_count = 0
 otooley_count = 0
 
-
+# Opening the csv with the file path
 with open(election_csvpath) as election_csv:
 
 
     # CSV reader specifies delimiter and variable that holds contents
     csvreader = csv.reader(election_csv, delimiter=',')
+    # Skip header
     next(csvreader)
+    # Create a data list and get length of it for vote count
     data = list(election_csv)
     vote_count = (len(data))
 
     # Loop through looking for Votes
-
     for row in data:
         row = row.split(",")
         Voter_ID , County , Candidate = row
@@ -46,11 +47,12 @@ correy_percent = (correy_count / vote_count)*100
 li_percent = (li_count / vote_count)*100
 otooley_percent = (otooley_count / vote_count)*100
 
-
+# Heading
+print(" \n")
 print("Election Results")
 print("-------------------------")
 
-# Print all the totals and percentages as strings w/ rounded averages for cleaner results
+# Print all the totals and percentages as strings. Decided to round percentages.
 print("Total Votes: " + str(vote_count))
 print("-------------------------")
 print("Khan: " + str(round(khan_percent)) + "% (" + str(khan_count) + ")")
@@ -65,7 +67,7 @@ correy = ("Correy: " + str(round(correy_percent)) + "% (" + str(correy_count) + 
 li = ("Li " + str(round(li_percent)) + "% (" + str(li_count) + ")")
 otooley = ("O'Tooley: " + str(round(otooley_percent)) + "% (" + str(otooley_count) + ")")
 
-#Pick the winnder!
+#Pick the winner!
 if ((correy_count) > (khan_count or li_count or otooley_count)):
     winner = "Winner: Correy"
 elif ((li_count) > (khan_count or correy_count or otooley_count)):
@@ -77,7 +79,7 @@ elif ((khan_count) > (correy_count or li_count or otooley_count)):
 print(winner)
 print("-------------------------")
 
-
+# Create text file with the results :)
 with open("Election Results.txt", "w") as text_file:
-    print(f'Election Results \n-------------------------\nTotal Votes: {vote_count}\n-------------------------\n'+ khan +'\n' + correy + '\n' + li + '\n' + otooley + '\n-------------------------\n' + winner + '\n-------------------------', file = text_file)
-    
+    print(f'\nElection Results \n-------------------------\nTotal Votes: {vote_count}\n-------------------------\n'+ \
+    khan +'\n' + correy + '\n' + li + '\n' + otooley + '\n-------------------------\n' + winner + '\n-------------------------', file = text_file)
