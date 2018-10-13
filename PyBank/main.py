@@ -23,6 +23,7 @@ with open(budget_csvpath) as budget_csv:
         revenue.append(int(row[1]))
     
     # Printing total months & total revenue
+    print(" \n")
     print("Financial Analysis")   
     print("----------------------------")
     month_count = (len(revenue))
