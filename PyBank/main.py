@@ -44,7 +44,7 @@ with open(budget_csvpath) as budget_csv:
         min_rev_change_date = str(date[rev_change.index(min(rev_change)) + 1])
     
     # Printing Average Change, Greatest Increace, & Greatest Decrease
-    print(f"Avereage Change: $", (avg_rev_change))
+    print(f"Average Change: $", (avg_rev_change))
     print(f"Greatest Increase in Profits:", max_rev_change_date,"($", max_rev_change,")")
     print(f"Greatest Decrease in Profits:", min_rev_change_date,"($", min_rev_change,")")
     
